@@ -29,7 +29,7 @@ function Login() {
       localStorage.setItem('token', data.token);
       
       console.log(data.user)
-      navigate('/')
+      navigate('/posts')
     }else{
       console.log('error')
       toast(data.message,{

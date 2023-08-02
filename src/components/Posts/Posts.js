@@ -15,6 +15,7 @@ function Posts() {
   const {newpost,loading} = useSelector((state)=>state.posts)
   useEffect(()=>{
     dispatch(getPosts)
+    
   },[getPosts])
 
   return (

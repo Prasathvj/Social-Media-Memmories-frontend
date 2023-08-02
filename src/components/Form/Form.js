@@ -5,6 +5,7 @@ import { createPost } from '../../Actions/PostsActions';
 import { useNavigate } from 'react-router-dom';
 import Base from '../../Base/Base';
 import Loader from '../../DashBoard/Loader';
+import { toast } from 'react-toastify';
 
 
 
@@ -57,10 +58,18 @@ const handleCancel = ()=>{
   }
   useEffect(() => {
     if(isPostCreated) {
+      toast('Post created successfully',{
+        type:"success",
+        position:toast.POSITION.TOP_CENTER
+      })
         navigate('/posts')
     }
 
     if(error)  {
+      toast('Post create failed',{
+        type:"error",
+        position:toast.POSITION.TOP_CENTER
+      })
         console.log(error)
         return
     }

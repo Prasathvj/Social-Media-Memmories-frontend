@@ -32,7 +32,7 @@ function Signup() {
             position:toast.POSITION.TOP_CENTER
         })
         localStorage.setItem('token', data.token)
-        navigate('/')
+        navigate('/posts')
     }else{
         toast(data.message,{
             type:'error',
