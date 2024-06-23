@@ -84,6 +84,12 @@ function Base({title,description,children}) {
     <div>
       {children}
     </div>
+    <df-messenger
+        intent="WELCOME"
+        chat-title="Bot"
+        agent-id="36700b47-db8c-4b6b-902f-73ff4143fbfc"
+        language-code="en"
+></df-messenger>
     </div>
   )
 }
